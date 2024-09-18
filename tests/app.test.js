@@ -56,6 +56,7 @@ describe("API testing", () => {
 
         expect(res.statusCode).toBe(200);
         expect(res.body).toEqual(mockData);
+        expect(getAllEmployees).toHaveBeenCalled();
     });
 
     it("should return employee by id", async() => {
@@ -71,4 +72,6 @@ describe("API testing", () => {
         expect(result.statusCode).toBe(200);
         expect(result.body).toEqual(mockData)
     })
+
+   
 });
